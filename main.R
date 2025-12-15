@@ -59,7 +59,7 @@ legend("topleft",inset = .02,y.intersp = 1.5,
        lwd = c(2, 2, 2, 3), 
        bty = "n")
 
-#Vi undersøger om vi kunne have nøjes medn simpel lineær
+#Vi undersøger om vi kunne have nøjes med en simpel lineær
 anova(fit.1,fit.3)
 # og nu for anden orden
 fit.2 <- lm(logwage ~ exper + I(exper^2) , data = Bwages)
@@ -274,4 +274,5 @@ confint(mle.fit.ny)
 # vi gætter
 fit.sidst <-glm(Y/n ~ 1, family=quasibinomial, weights=n/(1+(n-1)*0.5972883))
 summary(fit.sidst)$dispersion
+
 
